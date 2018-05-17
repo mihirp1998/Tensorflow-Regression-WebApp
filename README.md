@@ -4,6 +4,7 @@ This is a deployable webapp but on its backend its a scalable regression model w
 By simply changing the number of paramaters and implementing the training functions on the backend you will get a 
 webapp which could be tested on any dataset.
 
+![Home](images/home.png)
 ---
 
 ## Set up the development environment
@@ -20,7 +21,7 @@ This can been implemented using `own_model.py`,`views.py`,`./Template` resepecti
 of the model you will finally end up with testable webapp
 File Structure:
 
-![Tree](Images/tree.png)
+
 
 ## Training
 The model can be trained using the `own_model.py` file which contains the main function. The main function will go through
@@ -77,6 +78,12 @@ you can make change in feedforward.
 ```
 Evaluate the model using a bar graph of Matplotlib
 
+
+![Bar](images/bar.png)
+
+
+![Hist](images/hist.png)
+
 ***
 ## Server
 The biggest challenge with the server was to get the results while testing with the least latency. The computation for the server is happening in `app/views.py`.Since we have feedforward multipiication happening at the run time. And since there are multiple models to be loaded while testing we have to load all
@@ -114,5 +121,7 @@ and thus improve the latency of the application.
 
 The user will upload the file using Ajax post request , which will be computed, rendered and sent back to frontend
 to display the results along with Histogram and Bargraph for visualization. With additional matrix representing the difference
+
+![Table](images/table.png)
 
 ***
